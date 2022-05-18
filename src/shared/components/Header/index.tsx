@@ -1,18 +1,21 @@
 import { HeaderContainer, HeaderSection, List, ListItem, Title } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  let navigate = useNavigate();
+
   return (
     <>
       <HeaderSection>
         <HeaderContainer>
-          <Title>FoodApp</Title>
+          <Title onClick={() => navigate('/')}>FoodApp</Title>
           <List>
-            <ListItem>Restaurantes</ListItem>
+            <ListItem onClick={() => navigate('/restaurants')}>Restaurantes</ListItem>
             <ListItem>Sobre</ListItem>
           </List>
         </HeaderContainer>
       </HeaderSection>
-    </>
+    </> 
   )
 }
 

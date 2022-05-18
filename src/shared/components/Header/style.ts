@@ -17,6 +17,7 @@ export const Title = styled.h1`
   font-size: 24px;
   font-weight: 500;
   margin-right: 40px;
+  cursor: pointer;
 `
 
 export const List = styled.ul`
@@ -27,4 +28,5 @@ export const ListItem = styled.li`
   color: white;
   margin-right: 20px;
   font-size: 16px;
+  cursor: pointer;
 `;
