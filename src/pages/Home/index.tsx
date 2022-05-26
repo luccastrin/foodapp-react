@@ -9,9 +9,9 @@ const Home = () => {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <HomeSection bg="./assets/images/bg-home.jpg">
-        <Overlay></Overlay>
+        <Overlay />
         <HomeContainer>
           <h1>Bem vindo ao FoodApp</h1>
           <h2>Está com fome? Peça e receba em casa</h2>

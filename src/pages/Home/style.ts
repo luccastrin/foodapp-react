@@ -1,8 +1,17 @@
 import styled from 'styled-components';
-
 interface BgColor {
   bg: string
 }
+
+export const HomeSection = styled.section<BgColor>`
+  position: relative;
+  background-image: url(${({ bg }) => bg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+  color: white;
+  height: 600px;
+`;
 
 export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5); 
@@ -41,13 +50,5 @@ export const HomeContainer = styled.div`
   }
 `;
 
-export const HomeSection = styled.section<BgColor>`
-  position: relative;
-  background-image: url(${({ bg }) => bg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20px 0;
-  color: white;
-  height: 600px;
-`;
+
 

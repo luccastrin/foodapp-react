@@ -11,6 +11,10 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
 
+  body {
+    background-color: #ECF0F5;
+  }
+
   li {
     list-style: none;
   }
