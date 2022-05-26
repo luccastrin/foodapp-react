@@ -1,18 +1,23 @@
-import { LinkRestaurant, Rating, RestaurantInfo } from "./style"
+import { LinkRestaurant, Rating, RestaurantInfo } from "./style";
+import { IRestaurants } from "../../../models/restaurants.model";
 
-export const Restaurant = () => {
+interface RestaurantProps {
+  restaurant: IRestaurants
+}
+
+export const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
   return (
     <>
       <LinkRestaurant>
-        <img src="./assets/images/foods/bread.png" alt="" />
+        <img src={ restaurant.imagePath } alt="" />
         <RestaurantInfo>
-          <h3>BREAD AND BAKERY</h3>
-          <p>Padaria</p>
-          <p>25m</p>
+          <h3>{ restaurant.name }</h3>
+          <p>{ restaurant.category }</p>
+          <p>{ restaurant.deliveryEstimate }</p>
         </RestaurantInfo>
         <Rating>
           <img src="./assets/images/star.svg" alt="" />
-          <p>4.9</p>
+          <p>{ restaurant.rating }</p>
         </Rating>
       </LinkRestaurant>
     </>
